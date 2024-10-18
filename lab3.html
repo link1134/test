@@ -1,0 +1,295 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e6d841051d.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .body_container_lab3 {
+            background: linear-gradient(90deg, rgba(74, 70, 70, 0.838), rgb(159, 159, 159), rgba(74, 70, 70, 0.838));
+            display: flex;
+            flex-direction: column;
+
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        .material_container_lab3 {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            row-gap: 40px;
+            column-gap: 40px;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .material_lab3 {
+            width: 400px;
+            height: 230px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            z-index: 9;
+        }
+
+        .material_lab3 i {
+            color: rgb(0, 0, 0)
+        }
+
+        .material_lab3:hover {
+            
+            transition: all 0.2s ease;
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0px 5px 20px white;
+            color: white;
+        }
+
+
+        .material_lab3:hover i {
+            color: #634eff;
+        }
+
+
+        .h1_lab3 {
+            font-family: "Bungee", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .inner_material_h1_lab3 {
+            font-family: "Bungee", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+        }
+
+        .modal_lab3 {
+            display: flex;
+            z-index: 99999;
+            position: fixed;
+            top: 0;
+            min-height: 100vh;
+            width: 100vw;
+            background-color: rgb(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner_modal_lab3 {
+            position: relative;
+            top: 60%;
+            margin: auto;
+            background-color: white;
+
+            width: 1200px;
+            height: 640px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+
+        .top_lab3 {
+            height: 575px;
+            display: flex;
+        }
+
+        .bot_lab3 {
+            display: flex;
+            flex: 1;
+            background-color: rgb(255, 255, 255);
+
+            border: 1px solid rgb(0, 0, 0, 0.3);
+        }
+
+        .left_lab3 {
+            width: 300px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(0, 0, 0, 0.3);
+
+        }
+
+        .right_lab3 {
+            flex: 1;
+            background-color: #ffffff;
+            border: 1px solid rgb(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .h1_lab3 {
+            font-family: "Bungee", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .menu_lab3 {
+            margin-left: 5px;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .lesson_button_lab3 {
+            padding: 10px 20px;
+            border: none;
+            text-align: start;
+            background-color: inherit;
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-size: 20px;
+            border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+        }
+
+
+        .lesson_button_lab3:hover {
+
+            background-color: rgb(255, 0, 0);
+        }
+
+        .new_h1_and_exit {
+            display: flex;
+            height: 42.4px;
+            justify-content: space-between;
+        }
+
+        .hide {
+            display: none;
+        }
+        .container_iframe_lab3{
+            flex: 1;
+            display: flex;
+        }
+        .pdf_lab3{
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body_container_lab3">
+        <div id="modal1" class="modal_lab3 hide">
+            <div class="inner_modal_lab3">
+                <div class="top_lab3">
+                    <div class="left_lab3">
+                        <h1 class="h1_lab3">
+                            Lesson Menu
+                        </h1>
+                        <div class="menu_lab3">
+                            <button class="lesson_button_lab3">
+                                1. Lesson 1
+                            </button>
+                            <button class="lesson_button_lab3">
+                                2. Lesson 2
+                            </button>
+                            <button class="lesson_button_lab3">
+                                3. Lesson 3
+                            </button>
+                            <button class="lesson_button_lab3" style="border: none;">
+                                4. Lesson 4
+                            </button>
+                        </div>
+                    </div>
+                    <div class="right_lab3">
+                        <div class="new_h1_and_exit">
+                            <h1 class="h1_lab3">
+                                Lesson Content
+                            </h1>
+                            <button class="fa-solid fa-xmark fa-2xl"
+                                style="border: none; background-color: inherit; padding-right: 10px; cursor: pointer;"
+                                onclick="turnOffModal()">
+                            </button>
+                        </div>
+                        <div class="container_iframe_lab3">
+                            <iframe class="pdf_lab3" src="Week 1 - Introduction.pdf" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot_lab3">
+
+                </div>
+            </div>
+        </div>
+        <h1 class="h1_lab3" style="text-align: center; margin: 30px;">Avaible Material</h1>
+        <div class="material_container_lab3">
+            <div class="material_lab3" style="cursor: pointer;" onclick="openModalLab3('modal1')">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 1 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 2 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 3 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 4 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 5 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 6 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 7 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 8 </h1>
+            </div>
+            <div class="material_lab3" style="cursor: pointer;">
+                <i class="fa-solid fa-book fa-3x"></i>
+                <h1 class="inner_material_h1_lab3" style="padding: 10px;"> Document 9 </h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openModalLab3(modal_name) {
+            document.getElementById(modal_name).className = document.getElementById(modal_name).className.replace(" hide", "")
+
+        }
+        function turnOffModal() {
+            var i
+            var modal_lab3 = document.getElementsByClassName("modal_lab3")
+            for (i = 0; i < modal_lab3.length; i++) {
+                modal_lab3[i].className += " hide";
+            }
+        }
+    </script>
+</body>
+
+</html>
